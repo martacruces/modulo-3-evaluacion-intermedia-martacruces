@@ -4,9 +4,9 @@ const Pokemon = props => {
     return (
         <div>
             <img src={props.image} alt={props.pokemonName}/>
-            <h5>{props.pokemonName}</h5>
-            <ul>{props.typesArray.map((type) => {
-                return <li>
+            <h3 className="card__title">{props.pokemonName}</h3>
+            <ul className="card__list">{props.typesArray.map((type) => {
+                return <li className="card__list-item">
                     {type}
                 </li>
             })}

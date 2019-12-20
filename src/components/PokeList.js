@@ -2,9 +2,9 @@ import React from 'react';
 import Pokemon from './Pokemon';
 
 const PokeList = props => {
-    return <ul>
+    return <ul className="pokemon__container">
         {props.items.map((item)=>{
-            return <li>
+            return <li className="pokemon__card">
                 <Pokemon
                 image={item.url}
                 pokemonName={item.name}
