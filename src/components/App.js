@@ -1,21 +1,21 @@
 import React from 'react';
 import '../stylesheets/App.scss';
-import pokemons from '../data/pokemons.json';
+import data from '../data/data.json';
 import PokeList from './PokeList';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: pokemons
+      pokemons: data
     }
   }
 
   render() {
     return (
       <div className="App">
-        <h1 className="pokemon__title">Mi lista de Pokemons</h1>
-        <PokeList items={this.state.data}/>
+        <h1 className="page__title">Mi lista de Pokemons</h1>
+        <PokeList items={this.state.pokemons}/>
       </div>
     );
   }
