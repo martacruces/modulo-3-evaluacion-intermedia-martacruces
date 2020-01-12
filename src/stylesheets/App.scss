@@ -1,33 +1,62 @@
-.page__title{
+@import './core/variables.scss';
+
+.App{
+  width: 100%;
+  min-height: 100vh;
   text-align: center;
+  padding: 60px 30px;
+
+  &__title{
+    margin-top: 0px;
+    color: $name-color;
+  }
 }
 
 .pokemon__container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-}
-.pokemon__card{
-  place-self: center;
-  padding: 5px;
-  border: 2px solid blueviolet;
-  border-radius: 5%;
-  text-transform: capitalize;
-  position: relative;
-}
-.card__title{
-  text-align: center;
-  background-color: blueviolet;
-  color: whitesmoke;
-}
-.card__list{
+  width: 80%;
+  margin: 40px auto;
   display: flex;
-  justify-content: space-around;
-  &-item{
-    font-size: 12px;
-    border: 1px solid rebeccapurple;
-    background-color: rebeccapurple;
-    color: whitesmoke;
-    border-radius: 5px; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  width: 150px;
+  height: 250px;
+  margin: 15px;
+  border: 2px solid $border-color;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  text-transform: capitalize;
+
+  &__img{
+    width: 75px;
+    margin: auto;
+  }
+
+  &__title{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    background-color: $name-color;
+    color: $text-color;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    
+    &-item{
+      font-size: 14px;
+      padding: 5px;
+      border: 1px solid $border-color;
+      background-color: $hability-color;
+      color: $text-color;
+      border-radius: 5px; 
+    }
   }
 }
